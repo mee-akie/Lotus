@@ -1,5 +1,3 @@
-#:kivy 1.0.9  
-
 <LoginPage>:
     name: 'login'
     Screen:
@@ -7,23 +5,31 @@
             # source: "assets/logoPadaria.png"
             # pos_hint: {"x": .25, "y": .5}
             # size_hint: 0.5, 0.5
+
         MDTextField:
             id: user
-            hint_text: "Usuario"
+            hint_text: "Email"
             mode: "rectangle"
             pos_hint: {"x": .25, "y": .4}
             size_hint: 0.5, None
+
         MDTextField:
             id: senha
-            hint_text: "Insira sua senha"
+            hint_text: "Senha"
             mode: "rectangle"
             pos_hint: {"x": .25, "y": .3}
             size_hint: 0.5, None
             password: True
+
         MDRoundFlatButton:
             text: "Entrar"
             pos_hint: {"x": .25, "y": .2}
             size_hint: 0.5, None
             on_release: root.validaLogin()
 
+        Label:
+            pos_hint : {"center_x":.5,"center_y":.17}
+            font_size: '12sp'
+            color: get_color_from_hex("#B42529")
+            text: 'Fazer cadastro'
             

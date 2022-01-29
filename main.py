@@ -27,14 +27,16 @@ Window.size = (400, 650)
 KV = '''
 #:include HomeScreen.kv
 #:include Login.kv
+#:include CadastroScreen.kv
 
 #:import get_color_from_hex kivy.utils.get_color_from_hex
-#:set toolbarColor get_color_from_hex("#DF6710")
+#:set toolbarColor get_color_from_hex("#F6C7B7")
 
 
 ScreenManager:
     LoginPage:
     HomePage:
+    CadastroPage:
 
 '''
 
@@ -43,24 +45,36 @@ class LoginPage(Screen):
     def validaLogin(self, *args):
         self.parent.current = 'home'
 
+    def switchCadastro(self):
+        self.parent.current = 'cadastro'
+
+
+class CadastroPage(Screen):
+
+    def switchLogin(self):
+        self.parent.current = 'login'
+
 
 class HomePage(Screen):
-    
+
     def switchHome(self):
         self.parent.current = 'home'
+
 
 
 # Gerenciador de paginas
 sm = ScreenManager()
 sm.add_widget(HomePage(name='home'))
 sm.add_widget(LoginPage(name='login'))
+sm.add_widget(CadastroPage(name='cadastro'))
+
 
 
 class Main(MDApp):
     def build(self):
 
         #Cor base da aplicacao
-        self.theme_cls.primary_palette = "DeepOrange"
+        self.theme_cls.primary_palette = "Pink"
         
         return Builder.load_string(KV)
 

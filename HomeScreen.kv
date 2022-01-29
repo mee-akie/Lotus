@@ -10,8 +10,8 @@
 
     MDBottomNavigation:
         size_hint_y: .09
-        panel_color: get_color_from_hex("#DF6710")
-        text_color_active: get_color_from_hex("#fff4e6")
+        panel_color: get_color_from_hex("#F6C7B7")
+        text_color_active: get_color_from_hex("#B42529")
         
         MDBottomNavigationItem:
             name: 'screen 1'
@@ -21,16 +21,16 @@
 
         MDBottomNavigationItem:
             name: 'screen 2'
-            text: 'Botao 2'
-            icon: 'barcode'
+            text: 'Menstrual'
+            icon: 'atom-variant'
             on_enter:
                 root.manager.transition.direction = 'left'
                 root.switchHome()
 
         MDBottomNavigationItem:
             name: 'screen 3'
-            text: 'Botao 3'
-            icon: 'account-group'
+            text: 'Reprodutivo'
+            icon: 'cards-heart'
             on_enter:
                 root.manager.transition.direction = 'left'
                 root.switchHome()
