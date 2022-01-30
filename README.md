@@ -1,3 +1,6 @@
+# Lótus
+Projeto Hackathona Ade Sampa 2022
+
 # Dependencies
 ``` sudo apt install python3.8 ``` 
 
