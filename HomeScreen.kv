@@ -48,3 +48,64 @@
             text: 'perfil'
             icon: 'account-multiple'
             on_enter: root.switchHome()
+
+
+    ## NOTIFICACAO
+    MDCard:
+        size_hint: None, None
+        size: "350dp", "150dp"
+        pos_hint: {"center_x": .5, "center_y": .75}
+        md_bg_color : get_color_from_hex("#EFEFEF")
+        ripple_behavior: True
+        border_radius: 20
+        radius: [15]
+
+    Label:
+        pos_hint : {"center_x":.28,"center_y":.83}
+        font_size: '26sp'
+        color: get_color_from_hex("#F6C7B7")
+        text: 'Notificações'
+
+    Label:
+        pos_hint : {"center_x":.47,"center_y":.77}
+        font_size: '17sp'
+        color: get_color_from_hex("#000000")
+        text: 'Está na hora de marcar a sua consulta!'
+
+    Label:
+        pos_hint : {"center_x":.46,"center_y":.7}
+        font_size: '17sp'
+        color: get_color_from_hex("#000000")
+        text: 'Ayla, lembre-se de retornar ao clínico\npara ver o resultado do exame'
+
+    Label:
+        pos_hint : {"center_x":.86,"center_y":.83}
+        font_size: '28sp'
+        color: get_color_from_hex("#F6C7B7")
+        text: 'X'
+
+
+    ## CARDS
+    Label:
+        pos_hint : {"center_x":.48,"center_y":.55}
+        font_size: '23sp'
+        color: get_color_from_hex("#F6C7B7")
+        text: 'Confira o que temos para você:'
+
+    BoxLayout:
+        Image:
+            source: "assets/cards_home_1.png"
+            pos_hint: {"center_x":.5,"center_y":.37}
+            size_hint: 0.2, 0.4
+
+    Label:
+        pos_hint : {"center_x":.5,"center_y":.18}
+        font_size: '23sp'
+        color: get_color_from_hex("#F6C7B7")
+        text: 'Não se esqueça do que você salvou:'
+
+    BoxLayout:
+        Image:
+            source: "assets/cards_home_2.png"
+            pos_hint: {"center_x":.5,"center_y":.115}
+            size_hint: 0.5, 0.4
