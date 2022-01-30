@@ -23,12 +23,13 @@ from kivymd.uix.button import MDFloatingActionButtonSpeedDial
 Window.size = (400, 650)
 
 
-
 KV = '''
 #:include HomeScreen.kv
 #:include Login.kv
 #:include CadastroScreen.kv
 #:include SmenstrualScreen.kv
+#:include CalendarioScreen.kv
+
 
 #:import get_color_from_hex kivy.utils.get_color_from_hex
 #:set toolbarColor get_color_from_hex("#FED8CB")
@@ -39,11 +40,11 @@ ScreenManager:
     HomePage:
     CadastroPage:
     SmenstrualPage:
+    CalendarioPage:
 
 '''
 
 class LoginPage(Screen):
-    
     def validaLogin(self, *args):
         self.parent.current = 'home'
 
@@ -52,13 +53,11 @@ class LoginPage(Screen):
 
 
 class CadastroPage(Screen):
-
     def switchLogin(self):
         self.parent.current = 'login'
 
 
 class HomePage(Screen):
-
     def switchHome(self):
         self.parent.current = 'home'
 
@@ -66,9 +65,15 @@ class HomePage(Screen):
         self.parent.current = 'smenstrual'
 
 
-
 class SmenstrualPage(Screen):
+    def switchHome(self):
+        self.parent.current = 'home'
 
+    def switchCalendario(self):
+        self.parent.current = 'calendario'
+
+
+class CalendarioPage(Screen):
     def switchHome(self):
         self.parent.current = 'home'
 
@@ -79,7 +84,7 @@ sm.add_widget(HomePage(name='home'))
 sm.add_widget(LoginPage(name='login'))
 sm.add_widget(CadastroPage(name='cadastro'))
 sm.add_widget(SmenstrualPage(name='smenstrual'))
-
+sm.add_widget(CalendarioPage(name='calendario'))
 
 
 class Main(MDApp):

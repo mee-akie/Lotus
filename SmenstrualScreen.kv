@@ -55,3 +55,55 @@
             size_hint: 0.2, 0.4
 
 
+    MDFillRoundFlatIconButton:
+        text : 'Acessar e entender meu calendário menstrual'
+        icon : "calendar"
+        pos_hint : {"center_x":.48,"center_y":.54}
+        md_bg_color : get_color_from_hex("#FA7F77")
+        font_size : 14
+        user_font_size: "64sp"
+        on_press:
+            root.manager.transition.direction = 'left'
+            root.switchCalendario()
+
+    MDCard:
+        size_hint: None, None
+        size: "278dp", "200dp"
+        pos_hint: {"center_x": .4, "center_y": .33}
+        md_bg_color : get_color_from_hex("#FA7F77")
+        ripple_behavior: True
+        border_radius: 20
+        radius: [15]
+
+    Label:
+        pos_hint : {"center_x":.4,"center_y":.45}
+        font_size: '20sp'
+        color: get_color_from_hex("#FFFFFF")
+        text: 'MEUS EXAMES DE ROTINA'
+
+    MDFillRoundFlatIconButton:
+        text : '04/7/2021 - Exame Papanicolau '
+        icon : "checkbox-marked-outline"
+        pos_hint : {"center_x":.4,"center_y":.39}
+        md_bg_color : get_color_from_hex("#FA7F77")
+        text_color : get_color_from_hex("#FFFFFF")
+        font_size : 14
+        user_font_size: "64sp"
+
+    MDFillRoundFlatIconButton:
+        text : '09/11/2021 - Exame Mamografia'
+        icon : "checkbox-blank-outline"
+        pos_hint : {"center_x":.4,"center_y":.33}
+        md_bg_color : get_color_from_hex("#FA7F77")
+        text_color : get_color_from_hex("#B42529")
+        font_size : 14
+        user_font_size: "64sp"
+
+    MDFillRoundFlatIconButton:
+        text : '20/12/2021 - Consulta geral com\nDra Rosane Tavares'
+        icon : "checkbox-marked-outline"
+        pos_hint : {"center_x":.4,"center_y":.26}
+        md_bg_color : get_color_from_hex("#FA7F77")
+        text_color : get_color_from_hex("#FFFFFF")
+        font_size : 14
+        user_font_size: "64sp"
