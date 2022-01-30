@@ -16,7 +16,7 @@ from kivymd.uix.textfield import MDTextField
 from kivy.uix.popup import Popup
 from kivymd.uix.menu import MDDropdownMenu
 from kivymd.uix.dropdownitem import MDDropDownItem
-from datetime import date
+from kivymd.uix.button import MDFloatingActionButtonSpeedDial
 
 
 # define um tamanho de tela padrao (obs: nao eh fixo)
@@ -28,15 +28,17 @@ KV = '''
 #:include HomeScreen.kv
 #:include Login.kv
 #:include CadastroScreen.kv
+#:include SmenstrualScreen.kv
 
 #:import get_color_from_hex kivy.utils.get_color_from_hex
-#:set toolbarColor get_color_from_hex("#F6C7B7")
+#:set toolbarColor get_color_from_hex("#FED8CB")
 
 
 ScreenManager:
     LoginPage:
     HomePage:
     CadastroPage:
+    SmenstrualPage:
 
 '''
 
@@ -60,6 +62,15 @@ class HomePage(Screen):
     def switchHome(self):
         self.parent.current = 'home'
 
+    def switchSaude(self):
+        self.parent.current = 'smenstrual'
+
+
+
+class SmenstrualPage(Screen):
+
+    def switchHome(self):
+        self.parent.current = 'home'
 
 
 # Gerenciador de paginas
@@ -67,6 +78,7 @@ sm = ScreenManager()
 sm.add_widget(HomePage(name='home'))
 sm.add_widget(LoginPage(name='login'))
 sm.add_widget(CadastroPage(name='cadastro'))
+sm.add_widget(SmenstrualPage(name='smenstrual'))
 
 
 
