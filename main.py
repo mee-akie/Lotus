@@ -77,6 +77,9 @@ class CalendarioPage(Screen):
     def switchHome(self):
         self.parent.current = 'home'
 
+    def switchSaude(self):
+        self.parent.current = 'smenstrual'
+
 
 # Gerenciador de paginas
 sm = ScreenManager()
