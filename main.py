@@ -29,6 +29,9 @@ KV = '''
 #:include CadastroScreen.kv
 #:include SmenstrualScreen.kv
 #:include CalendarioScreen.kv
+#:include ComunidadeScreen.kv
+#:include ArtigosScreen.kv
+#:include TelemedicinaScreen.kv
 
 
 #:import get_color_from_hex kivy.utils.get_color_from_hex
@@ -41,6 +44,9 @@ ScreenManager:
     CadastroPage:
     SmenstrualPage:
     CalendarioPage:
+    ComunidadePage:
+    ArtigosPage:
+    TelemedicinaPage:
 
 '''
 
@@ -64,10 +70,31 @@ class HomePage(Screen):
     def switchSaude(self):
         self.parent.current = 'smenstrual'
 
+    def switchComunidade(self):
+        self.parent.current = 'comunidade'
+
+    def switchTelemedicina(self):
+        self.parent.current = 'telemedicina'
+
+    def switchArtigos(self):
+        self.parent.current = 'artigos'
+
 
 class SmenstrualPage(Screen):
     def switchHome(self):
         self.parent.current = 'home'
+
+    def switchSaude(self):
+        self.parent.current = 'smenstrual'
+
+    def switchComunidade(self):
+        self.parent.current = 'comunidade'
+
+    def switchTelemedicina(self):
+        self.parent.current = 'telemedicina'
+
+    def switchArtigos(self):
+        self.parent.current = 'artigos'
 
     def switchCalendario(self):
         self.parent.current = 'calendario'
@@ -80,6 +107,66 @@ class CalendarioPage(Screen):
     def switchSaude(self):
         self.parent.current = 'smenstrual'
 
+    def switchComunidade(self):
+        self.parent.current = 'comunidade'
+
+    def switchTelemedicina(self):
+        self.parent.current = 'telemedicina'
+
+    def switchArtigos(self):
+        self.parent.current = 'artigos'
+
+
+class ComunidadePage(Screen):
+    def switchHome(self):
+        self.parent.current = 'home'
+
+    def switchSaude(self):
+        self.parent.current = 'smenstrual'
+
+    def switchComunidade(self):
+        self.parent.current = 'comunidade'
+
+    def switchTelemedicina(self):
+        self.parent.current = 'telemedicina'
+
+    def switchArtigos(self):
+        self.parent.current = 'artigos'
+
+
+class TelemedicinaPage(Screen):
+    def switchHome(self):
+        self.parent.current = 'home'
+
+    def switchSaude(self):
+        self.parent.current = 'smenstrual'
+
+    def switchComunidade(self):
+        self.parent.current = 'comunidade'
+
+    def switchTelemedicina(self):
+        self.parent.current = 'telemedicina'
+
+    def switchArtigos(self):
+        self.parent.current = 'artigos'
+
+
+class ArtigosPage(Screen):
+    def switchHome(self):
+        self.parent.current = 'home'
+
+    def switchSaude(self):
+        self.parent.current = 'smenstrual'
+
+    def switchComunidade(self):
+        self.parent.current = 'comunidade'
+
+    def switchTelemedicina(self):
+        self.parent.current = 'telemedicina'
+
+    def switchArtigos(self):
+        self.parent.current = 'artigos'
+
 
 # Gerenciador de paginas
 sm = ScreenManager()
@@ -88,6 +175,9 @@ sm.add_widget(LoginPage(name='login'))
 sm.add_widget(CadastroPage(name='cadastro'))
 sm.add_widget(SmenstrualPage(name='smenstrual'))
 sm.add_widget(CalendarioPage(name='calendario'))
+sm.add_widget(ComunidadePage(name='comunidade'))
+sm.add_widget(TelemedicinaPage(name='telemedicina'))
+sm.add_widget(ArtigosPage(name='artigos'))
 
 
 class Main(MDApp):

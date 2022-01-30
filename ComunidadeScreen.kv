@@ -1,18 +1,10 @@
-<CalendarioPage>:
-    name: 'calendario'
-    MDToolbar:
-        id: toolbar
-        pos_hint: {"top": 1}
-        elevation: 10
-        md_bg_color: toolbarColor
-
-    MDIconButton:
-        icon : "arrow-left"
-        pos_hint : {"center_x":.12,"center_y":.95}
-        icon_size: "128sp"
-        on_press:
-            root.manager.transition.direction = 'right'
-            root.switchSaude()
+<ComunidadePage>:
+    name: 'comunidade'
+    BoxLayout:
+        Image:
+            source: "assets/comunidade_cab.png"
+            pos_hint: {"center_x":.5,"center_y":.89}
+            size_hint: 0.2, 0.4
 
     MDBottomNavigation:
         size_hint_y: .09
@@ -58,16 +50,8 @@
 
     BoxLayout:
         Image:
-            source: "assets/calendario.png"
-            pos_hint: {"center_x":.7,"center_y":.63}
+            source: "assets/Comunidade.png"
+            pos_hint: {"center_x":.5,"center_y":.39}
             size_hint: 0.55, 0.6
     
-                    
-    MDFillRoundFlatIconButton:
-        text : 'Gerar relatório'
-        icon : "cloud-download"
-        pos_hint : {"center_x":.75,"center_y":.2}
-        md_bg_color : get_color_from_hex("#FA7F77")
-        text_color : get_color_from_hex("#FFFFFF")
-        font_size : 14
-        user_font_size: "64sp" 
+                

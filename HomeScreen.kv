@@ -27,7 +27,7 @@
             icon: 'clipboard-outline'
             on_enter:
                 root.manager.transition.direction = 'left'
-                root.switchHome()
+                root.switchTelemedicina()
 
         MDBottomNavigationItem:
             name: 'screen 3'
@@ -41,13 +41,13 @@
             icon: 'book-open-page-variant'
             on_enter:
                 root.manager.transition.direction = 'left'
-                root.switchHome()
+                root.switchArtigos()
         
         MDBottomNavigationItem:
             name: 'screen 5'
-            text: 'perfil'
+            text: 'comunidade'
             icon: 'account-multiple'
-            on_enter: root.switchHome()
+            on_enter: root.switchComunidade()
 
 
     ## NOTIFICACAO

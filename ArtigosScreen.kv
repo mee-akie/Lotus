@@ -1,10 +1,10 @@
-<CalendarioPage>:
-    name: 'calendario'
-    MDToolbar:
-        id: toolbar
-        pos_hint: {"top": 1}
-        elevation: 10
-        md_bg_color: toolbarColor
+<ArtigosPage>:
+    name: 'artigos'
+    BoxLayout:
+        Image:
+            source: "assets/comunidade_cab.png"
+            pos_hint: {"center_x":.5,"center_y":1}
+            size_hint: 0.2, 0.4
 
     MDIconButton:
         icon : "arrow-left"
@@ -54,20 +54,3 @@
             text: 'comunidade'
             icon: 'account-multiple'
             on_enter: root.switchComunidade()
-
-
-    BoxLayout:
-        Image:
-            source: "assets/calendario.png"
-            pos_hint: {"center_x":.7,"center_y":.63}
-            size_hint: 0.55, 0.6
-    
-                    
-    MDFillRoundFlatIconButton:
-        text : 'Gerar relatório'
-        icon : "cloud-download"
-        pos_hint : {"center_x":.75,"center_y":.2}
-        md_bg_color : get_color_from_hex("#FA7F77")
-        text_color : get_color_from_hex("#FFFFFF")
-        font_size : 14
-        user_font_size: "64sp" 
